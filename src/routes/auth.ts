@@ -19,15 +19,6 @@ export async function authRoutes(app: FastifyInstance) {
           password: { type: "string", minLength: 6 },
         },
       },
-      response: {
-        201: {
-          type: "object",
-          properties: {
-            token: { type: "string" },
-            user:  { type: "object", properties: { id: { type: "string" }, name: { type: "string" }, email: { type: "string" } } },
-          },
-        },
-      },
     },
   }, async (req, reply) => {
     const result = RegisterSchema.safeParse(req.body)
@@ -60,15 +51,6 @@ export async function authRoutes(app: FastifyInstance) {
         properties: {
           email:    { type: "string", format: "email" },
           password: { type: "string" },
-        },
-      },
-      response: {
-        200: {
-          type: "object",
-          properties: {
-            token: { type: "string" },
-            user:  { type: "object", properties: { id: { type: "string" }, name: { type: "string" }, email: { type: "string" } } },
-          },
         },
       },
     },
