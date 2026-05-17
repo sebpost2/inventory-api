@@ -20,6 +20,7 @@
     "@fastify/swagger-ui": "^5.2.6",
     "@libsql/client": "^0.17.3",
     "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
     "fastify": "^5.8.5",
     "zod": "^4.4.3"
   },
